@@ -13,25 +13,48 @@ public class WriteActivity extends AppCompatActivity {
     EditText t_write;
     String input2;
     Button button_save;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
 
+        final DBHelper dbHelper = new DBHelper(getApplicationContext(), "MD2.db", null, 1);
+
+
         button_back=(Button)findViewById(R.id.button_back);
         t_write = (EditText)findViewById(R.id.t_write);
         input2 = t_write.getText().toString();
+
+
+        /*button_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //String date = etDate.getText().toString();
+
+                //int price = Integer.parseInt(etPrice.getText().toString());
+
+
+                //result.setText(dbHelper.getResult());
+            }
+        });*/
+
+
+
+
 
         Button.OnClickListener multiClick = new Button.OnClickListener() {
 
             @Override
             public void onClick(View view) {
+                String data = t_write.getText().toString();
                 switch (view.getId()) {
                     case R.id.button_back:
                         finish();
                         break;
                     case R.id.button_save:
-                        return;
+                        dbHelper.insert(null,null ,data);
+                        break;
                 }
 
             }

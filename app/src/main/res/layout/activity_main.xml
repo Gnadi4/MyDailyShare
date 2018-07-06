@@ -10,7 +10,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="118dp"
+        android:layout_height="378dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -37,7 +37,7 @@
         <TextView
             android:id="@+id/tv_daily"
             android:layout_width="256dp"
-            android:layout_height="81dp"
+            android:layout_height="343dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
@@ -50,6 +50,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_show"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="120dp"
+            android:text="Show"
+            app:layout_constraintEnd_toEndOf="@+id/tv_daily"
+            app:layout_constraintTop_toTopOf="@+id/tv_daily" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_daily"
+            app:layout_constraintEnd_toEndOf="@+id/tv_daily" />
 
     </android.support.constraint.ConstraintLayout>
 
